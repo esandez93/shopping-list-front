@@ -1,0 +1,22 @@
+.ListsPage {
+  .Lists {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .List {
+      height: 160px;
+      max-width: 240px;
+      padding: 12px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      border: 1px solid black;
+      overflow: hidden;
+
+      :first-child {
+        border-bottom: 1px solid black;
+        font-weight: bold;
+      }
+    }
+  }
+}

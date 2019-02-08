@@ -1,0 +1,77 @@
+.SideMenu {
+  display: flex;
+  pointer-events: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  .menu {
+    width: 0px;
+    background-color: grey;
+    transition: 0.5s;
+
+    &.offline {
+      background-color: #790000;
+    }
+
+    * {
+      display: none;
+    }
+
+    .menu-header {
+      height: 70px;
+      border-bottom: 1px solid darkgray;
+    }
+
+    .menu-item {
+      color: #EAEAEA;
+      text-decoration: none;
+      height: 60px;
+      padding: 0px 12px;
+      margin: 0px 16px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid darkgray;
+
+      &:hover {
+        background-color: darkgray;
+        cursor: pointer;
+      }
+
+      .menu-item-icon {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .menu-backdrop {
+    display: none;
+  }
+
+  &.open {
+    pointer-events: initial;
+    z-index: 2;
+
+    .menu {
+      width: 250px;
+      padding: 10px 15px;
+
+      * {
+        display: block;
+      }
+
+      .menu-item {
+        display: flex;
+      }
+    }
+
+    .menu-backdrop {
+      display: block;
+      flex: 1;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+}
